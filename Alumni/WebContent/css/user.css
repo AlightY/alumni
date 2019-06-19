@@ -1,0 +1,30 @@
+body{
+		width: 412px;
+		height: 732px;
+		margin:0 auto;
+		text-align:center;
+		-webkit-user-select:none;
+	    -moz-user-select:none;
+	   	-ms-user-select:none;
+	    user-select:none;
+	}
+	a {
+		color: #1E90FF;
+		text-decoration: none;
+	}
+	
+	a:hover {
+		color: red;
+	}
+	
+	input {
+		border: none;
+		text-align:center;
+	}
+	
+	input:focus {
+		outline: none;
+	}
+	li{
+		list-style: none;
+	}
