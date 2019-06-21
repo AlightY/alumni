@@ -10,6 +10,7 @@
 	<% 
 		session.removeAttribute("stu"); 
 		response.sendRedirect("main.jsp");
+		session.removeAttribute("userName");
 	%>
 </body>
 </html>

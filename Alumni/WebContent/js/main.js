@@ -1,34 +1,31 @@
-	var name;
+	var name,userName;
 	$(function(){
-		name=$("#name a").html();
-		
-		if(name==null||name==""){
-			$("#option a:eq(0)").show();
-			$("#option a:eq(1)").show();
-			$("#option a:eq(2)").hide();
+		name=$("#name").html();
+		userName=$("#me").html();
+		if(name==""||name==null){
+			$(".have").attr("class","hide");
 			
 		}else{
-			$("#option a:eq(0)").hide();
-			$("#option a:eq(1)").hide();
-			$("#option a:eq(2)").show();
+			$(".no").attr("class","hide");
 		}
 	});
-	function nameTo(){
-		var $name = $("#name a").html();
-		if($name==null||$name==""){
+	$(document).on("click","#me",function(){
+		var flag=userName.indexOf("同学录");
+		if(flag==-1){
+			$("#me").attr("href","nameTo?name="+name);
+		}else{
 			return false;
 		}
-		$("#name a").attr("href","nameTo?name="+$name);
-	}
-	function pre(){
+	});
+	$(document).on("click","#pre",function(){
 		if(name==null||name==""){
 			return false;
 		}
-		$("#pre a").attr("href","showPre?name="+name);
-	}
-	function next(){
+		$(this).attr("href","showPre?name="+name);
+	});
+	$(document).on("click","#next",function(){
 		if(name==null||name==""){
 			return false;
 		}
-		$("#next a").attr("href","showNext?name="+name);
-	}
+		$(this).attr("href","showNext?name="+name);
+	});

@@ -3,6 +3,7 @@ package com.alight.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,9 +18,10 @@ public class RegisterController {
 	@Resource
 	private StuService stuServiceImpl;
 	@RequestMapping("register")
-	public String register(Stu stu,Model model){
+	public String register(Stu stu,Model model,HttpSession session){
 		stuServiceImpl.insStu(stu.getName(), stu.getPassword());
 		model.addAttribute("stu",stu);
+		session.setAttribute("userName", stu.getName());
 		return "user.jsp";
 	}
 	

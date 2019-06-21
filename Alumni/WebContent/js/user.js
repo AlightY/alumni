@@ -1,60 +1,28 @@
-var name;
-	var val;
+	var name;
+	var sex,grade,clas,stuID,birthday,birthplace,classjob,contact,workon,job,marriage,password;
 	$(function(){
-		name=$(".rrow:eq(0)").html();			
+		name=$(":text:eq(0)").val();
 	})
 	function toMain(obj){
-		name=$(".rrow:eq(0)").html();
+		name=$(":text:eq(0)").val();
 		$(obj).attr("href","toMain?name="+name);
 	}
-	function upd(obj){
-		var type=$(obj).html();
-		if(type=="修改性别"){
-			val=$(":text:eq(0)").val();
-			$(":text:eq(0)").next().attr("href","updSex?name="+name+"&sex="+val);
-		}
-		if(type=="修改年级"){
-			val=$(":text:eq(1)").val();
-			$(":text:eq(1)").next().attr("href","updGrade?name="+name+"&grade="+val);
-		}
-		if(type=="修改班级"){
-			val=$(":text:eq(2)").val();
-			$(":text:eq(2)").next().attr("href","updClas?name="+name+"&clas="+val);
-		}
-		if(type=="修改学号"){
-			val=$(":text:eq(3)").val();
-			$(":text:eq(3)").next().attr("href","updStuID?name="+name+"&stuID="+val);
-		}
-		if(type=="修改生日"){
-			val=$(":text:eq(4)").val();
-			$(":text:eq(4)").next().attr("href","updBirthday?name="+name+"&birthday="+val);
-		}
-		if(type=="修改出生地"){
-			val=$(":text:eq(5)").val();
-			$(":text:eq(5)").next().attr("href","updBirthplace?name="+name+"&birthplace="+val);
-		}
-		if(type=="修改班级职务"){
-			val=$(":text:eq(6)").val();
-			$(":text:eq(6)").next().attr("href","updClassjob?name="+name+"&classjob="+val);
-		}
-		if(type=="修改手机"){
-			val=$(":text:eq(7)").val();
-			$(":text:eq(7)").next().attr("href","updContact?name="+name+"&contact="+val);
-		}
-		if(type=="修改工作地"){
-			val=$(":text:eq(8)").val();
-			$(":text:eq(8)").next().attr("href","updWorkon?name="+name+"&workon="+val);
-		}
-		if(type=="修改职务"){
-			val=$(":text:eq(9)").val();
-			$(":text:eq(9)").next().attr("href","updJob?name="+name+"&job="+val);
-		}
-		if(type=="修改婚姻状态"){
-			val=$(":text:eq(10)").val();
-			$(":text:eq(10)").next().attr("href","updMarriage?name="+name+"&marriage="+val);
-		}
-		if(type=="修改密码"){
-			val=$(":text:eq(11)").val();
-			$(":text:eq(11)").next().attr("href","updPassword?name="+name+"&password="+val);
-		}
+	function updAll(){
+		name=$(":text:eq(0)").val();
+		sex=$(":text:eq(1)").val();
+		grade=$(":text:eq(2)").val();
+		clas=$(":text:eq(3)").val();
+		stuID=$(":text:eq(4)").val();
+		birthday=$(":text:eq(5)").val();
+		birthplace=$(":text:eq(6)").val();
+		classjob=$(":text:eq(7)").val();
+		contact=$(":text:eq(8)").val();
+		workon=$(":text:eq(9)").val();
+		job=$(":text:eq(10)").val();
+		marriage=$(":text:eq(11)").val();
+		password=$(":text:eq(12)").val();
+		var url="updAll?name="+name+"&sex="+sex+"&grade="+grade+"&clas="+clas+"&stuID="+stuID+"&birthday="
+		+birthday+"&birthplace="+birthplace+"&classjob="+classjob+"&contact="+contact+"&workon="
+		+workon+"&job="+job+"&marriage="+marriage+"&password="+password;
+		$(location).attr("href",url);
 	}

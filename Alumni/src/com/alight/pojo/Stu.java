@@ -48,8 +48,15 @@ public class Stu {
 	public int getStuID() {
 		return stuID;
 	}
-	public void setStuID(int stuID) {
-		this.stuID = stuID;
+	public void setStuID(String id) {
+		int stuID=0;
+		try{
+			stuID=Integer.parseInt(id);
+		}catch(Exception e){
+			stuID=0;
+		}finally {
+			this.stuID = stuID;			
+		}
 	}
 	public String getBirthday() {
 		return birthday;

@@ -19,7 +19,7 @@ public interface StuService {
 	void updSex(String name,String sex);
 	void updGrade(String name,String grade);
 	void updClas(String name,String clas);
-	void updStuID(String name,String stuID);
+	void updStuID(String name,int stuID);
 	void updBirthday(String name,String birthday);
 	void updBirthplace(String name,String birthPlace);
 	void updClassjob(String name,String classJob);

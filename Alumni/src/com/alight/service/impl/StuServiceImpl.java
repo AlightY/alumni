@@ -70,7 +70,7 @@ public class StuServiceImpl implements StuService {
 	}
 
 	@Override
-	public void updStuID(String name, String stuID) {
+	public void updStuID(String name, int stuID) {
 		stuMapper.updStuID(name, stuID);
 	}
 

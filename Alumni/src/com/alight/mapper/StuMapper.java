@@ -33,7 +33,7 @@ public interface StuMapper {
 	@Update("update stu set clas=#{arg1} where name=#{arg0} ")
 	void updClas(String name,String clas);
 	@Update("update stu set stuID=#{arg1} where name=#{arg0} ")
-	void updStuID(String name,String stuID);
+	void updStuID(String name,int stuID);
 	@Update("update stu set birthday=#{arg1} where name=#{arg0} ")
 	void updBirthday(String name,String birthday);
 	@Update("update stu set birthplace=#{arg1} where name=#{arg0} ")

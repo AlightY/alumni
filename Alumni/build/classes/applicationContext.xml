@@ -51,18 +51,4 @@
 		<aop:pointcut expression="execution(* com.alight.service.impl.*.*(..))" id="mypoint"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="mypoint"/>
 	</aop:config>
-	<bean id="stu" class="com.alight.pojo.Stu">
-		<property name="name" value="张三"></property>
-		<property name="sex" value="男"></property>
-		<property name="grade" value="大二"></property>
-		<property name="clas" value="安三"></property>
-		<property name="stuID" value="002"></property>
-		<property name="birthday" value="2019-06-15"></property>
-		<property name="birthplace" value="江西"></property>
-		<property name="classjob" value="无"></property>
-		<property name="contact" value=""></property>
-		<property name="workon" value="北京"></property>
-		<property name="job" value="java开发"></property>
-		<property name="marriage" value="未婚"></property>
-	</bean>
 </beans>
